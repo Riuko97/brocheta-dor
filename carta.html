@@ -361,15 +361,33 @@
             </div>
         </div>
     </footer>
-
+    
     <script>
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            var menu = document.getElementById('mobile-menu');
-            var icons = this.querySelectorAll('svg');
+        document.addEventListener('DOMContentLoaded', () => {
             
-            menu.classList.toggle('hidden');
-            icons[0].classList.toggle('hidden'); // Icono hamburguesa
-            icons[1].classList.toggle('hidden'); // Icono 'X'
+            // --- Lógica del Menú Móvil ---
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const icons = menuToggle.querySelectorAll('svg');
+
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                icons[0].classList.toggle('hidden'); // Icono Hamburguesa
+                icons[1].classList.toggle('hidden'); // Icono X
+            });
+
+            // --- Lógica del Banner de Cookies ---
+            const cookieBanner = document.getElementById('cookie-banner');
+            const acceptCookieBtn = document.getElementById('accept-cookie');
+
+            if (localStorage.getItem('cookie_accepted') !== 'true') {
+                cookieBanner.classList.remove('hidden');
+            }
+
+            acceptCookieBtn.addEventListener('click', () => {
+                cookieBanner.style.display = 'none';
+                localStorage.setItem('cookie_accepted', 'true');
+            });
         });
     </script>
 
