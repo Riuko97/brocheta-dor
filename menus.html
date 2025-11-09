@@ -31,42 +31,41 @@
     </script>
 </head>
 <body class="bg-brand-gray-light font-sans text-brand-gray-dark">
+    <header class="bg-brand-white shadow-md sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="Index.html" class="flex-shrink-0 flex items-center gap-2">
+                    <span class="font-display text-2xl font-bold tracking-wider">LA BROQUETA D'OR</span>
+                </a>
 
-    <header class="bg-brand-white shadow-md sticky top-0 z-50">
-                <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
-                    <span class="font-display text-2xl font-bold tracking-wider">LA BROQUETA D'OR</span>
-                </a>
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="index.html" class="font-display text-gray-500 hover:text-gray-900 hover:border-gray-300 border-b-2 border-transparent px-1 pt-1 text-sm font-semibold">INICIO</a>
+                    <a href="carta.html" class="font-display text-gray-900 border-b-2 border-brand-gray-dark px-1 pt-1 text-sm font-semibold">CARTA</a>
+                    <a href="menus.html" class="font-display text-gray-500 hover:text-gray-900 hover:border-gray-300 border-b-2 border-transparent px-1 pt-1 text-sm font-semibold">MENÚS</a>
+                    <a href="tapas.html" class="font-display text-gray-500 hover:text-gray-900 hover:border-gray-300 border-b-2 border-transparent px-1 pt-1 text-sm font-semibold">TAPAS</a>
+                    <a href="index.html#contacto" class="font-display text-gray-500 hover:text-gray-900 hover:border-gray-300 border-b-2 border-transparent px-1 pt-1 text-sm font-semibold">CONTACTO</a>
+                </div>
 
-                <div class="hidden md:flex md:items-center md:space-x-8">
-                    <a href="index.html" class="font-display text-gray-500 hover:text-gray-900 hover:border-gray-300 border-b-2 border-transparent px-1 pt-1 text-sm font-semibold">INICIO</a>
-                    <a href="carta.html" class="font-display text-gray-500 hover:text-gray-900 hover:border-gray-300 border-b-2 border-transparent px-1 pt-1 text-sm font-semibold">CARTA</a>
-                    <a href="menus.html" class="font-display text-gray-900 border-b-2 border-brand-gray-dark px-1 pt-1 text-sm font-semibold">MENÚS</a>
-                    <a href="tapas.html" class="font-display text-gray-500 hover:text-gray-900 hover:border-gray-300 border-b-2 border-transparent px-1 pt-1 text-sm font-semibold">TAPAS</a>
-                    <a href="index.html#contacto" class="font-display text-gray-500 hover:text-gray-900 hover:border-gray-300 border-b-2 border-transparent px-1 pt-1 text-sm font-semibold">CONTACTO</a>
-                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-gray-dark" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Abrir menú principal</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
 
-                <div class="md:hidden flex items-center">
-                    <button id="menu-toggle" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-gray-dark" aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="sr-only">Abrir menú principal</span>
-                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                    </button>
-                </div>
-            </div>
-        </nav>
-
-        <div class="md:hidden hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">INICIO</a>
-                <a href="carta.html" class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">CARTA</a>
-                <a href="menus.html" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">MENÚS</a>
-                <a href="tapas.html" class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">TAPAS</a>
-                <a href="index.html#contacto" class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">CONTACTO</a>
-            </div>
-        </div>
-    </header>
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">INICIO</a>
+                <a href="carta.html" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">CARTA</a>
+                <a href="menus.html" class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">MENÚS</a>
+                <a href="tapas.html" class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">TAPAS</a>
+                <a href="index.html#contacto" class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">CONTACTO</a>
+            </div>
+        </div>
+    </header>
 
         <main class="py-16 sm:py-24 bg-brand-gray-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,58 +125,94 @@
 
         </div>
     </main>
-        <footer class="bg-brand-gray-dark">
-                <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div>
-                    <a href="index.html" class="flex flex-col leading-none text-brand-white">
-                        <span class="text-sm font-medium text-gray-400 tracking-widest uppercase">Bar Restaurante</span>
-                        <span class="text-xl font-display font-black">LA BROQUETA D'OR</span>
-                    </a>
-    _B_R_O_Q_U_E_T_A_ _D_'_O_R_._ _T_o_d_o_s_ _l_o_s_ _d_e_r_e_c_h_o_s_ _r_e_s_e_r_v_a_d_o_s_._</_p_>
-            _</div>_
-        _</div>_
-    _</footer>_
+    <footer class="bg-brand-gray-dark">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <a href="index.html" class="flex flex-col leading-none text-brand-white">
+                        <span class="text-sm font-medium text-gray-400 tracking-widest uppercase">Bar Restaurante</span>
+                        <span class="text-xl font-display font-black">LA BROQUETA D'OR</span>
+                    </a>
+                    <p class="mt-4 text-sm text-gray-400">Cocina tradicional y de mercado desde 1998.</p>
+                </div>
 
+                <div>
+                    <h3 class="text-lg font-display font-semibold text-brand-white mb-4">Explora</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-brand-white transition duration-150 text-sm">Inicio</a></li>
+                        <li><a href="carta.html" class="text-brand-white hover:text-brand-white transition duration-150 text-sm font-semibold">Carta</a></li>
+                        <li><a href="tapas.html" class="text-gray-400 hover:text-brand-white transition duration-150 text-sm">Tapas</a></li>
+                        <li><a href="menus.html" class="text-gray-400 hover:text-brand-white transition duration-1Avisso 150 text-sm">Menús</a></li>
+                    </ul>
+                </div>
 
-    <div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 bg-brand-gray-dark text-brand-white p-4 shadow-lg z-50">
-                <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-            <p class="text-sm mb-3 md:mb-0 md:mr-4">
-                Este sitio web utiliza cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestro uso de cookies.
-            </p>
-            <button id="accept-cookie" class="flex-shrink-0 px-6 py-2 border border-transparent text-sm font-medium rounded-md text-brand-gray-dark bg-brand-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-white">
-                ACEPTAR
-            </button>
-        </div>
-    </div>
+                <div>
+                    <h3 class="text-lg font-display font-semibold text-brand-white mb-4">Contacto</h3>
+                    <div class="space-y-3 text-sm">
+                        <p class="flex items-start space-x-2 text-gray-400">
+                            <svg class="h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                            <span>93 788 18 19</span>
+                        </p>
+                        <p class="flex items-start space-x-2 text-gray-400">
+                            <svg class="h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenenodd" /></svg>
+                            <span>Avinguda del Doctor Gallart i Monés, 12, 08820, El Prat de Llobregat</span>
+                        </p>
+                    </div>
+                </div>
 
+                <div>
+                    <h3 class="text-lg font-display font-semibold text-brand-white mb-4">Horario</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><strong>Lunes a Jueves:</strong> 8:00 - 22:00</li>
+                        <li><strong>Viernes y Sábado:</strong> 8:00 - 24:00</li>
+                        <li><strong>Domingo:</strong> Cerrado</li>
+                    </ul>
+                </div>
 
-        <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            
-            // --- Lógica del Menú Móvil (Corregida) ---
-            const menuToggle = document.getElementById('menu-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const icons = menuToggle.querySelectorAll('svg');
+            </div>
+            
+            <div class="mt-8 border-t border-gray-700 pt-8 text-center">
+                <p class="text-sm text-gray-400">&copy; 2024 LA BROQUETA D'OR. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 bg-brand-gray-dark text-brand-white p-4 shadow-lg z-50">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm mb-3 md:mb-0 md:mr-4">
+                Este sitio web utiliza cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestro uso de cookies.
+            </p>
+            <button id="accept-cookie" class="flex-shrink-0 px-6 py-2 border border-transparent text-sm font-medium rounded-md text-brand-gray-dark bg-brand-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-white">
+                ACEPTAR
+            </button>
+        </div>
+    </div>
+     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- Lógica del Menú Móvil ---
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const icons = menuToggle.querySelectorAll('svg');
 
-            menuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                icons[0].classList.toggle('hidden'); // Icono Hamburguesa
-                icons[1].classList.toggle('hidden'); // Icono X
-            });
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                icons[0].classList.toggle('hidden'); // Icono Hamburguesa
+                icons[1].classList.toggle('hidden'); // Icono X
+            });
 
-            // --- Lógica del Banner de Cookies ---
-            const cookieBanner = document.getElementById('cookie-banner');
-            const acceptCookieBtn = document.getElementById('accept-cookie');
+            // --- Lógica del Banner de Cookies ---
+            const cookieBanner = document.getElementById('cookie-banner');
+            const acceptCookieBtn = document.getElementById('accept-cookie');
 
-            if (localStorage.getItem('cookie_accepted') !== 'true') {
-                cookieBanner.classList.remove('hidden');
-            }
+            if (localStorage.getItem('cookie_accepted') !== 'true') {
+                cookieBanner.classList.remove('hidden');
+            }
 
-            acceptCookieBtn.addEventListener('click', () => {
-                cookieBanner.style.display = 'none';
-                localStorage.setItem('cookie_accepted', 'true');
-            });
+            acceptCookieBtn.addEventListener('click', () => {
+                cookieBanner.style.display = 'none';
+                localStorage.setItem('cookie_accepted', 'true');
+            });
+        });
 
             // =========== NUEVO CÓDIGO PARA CARGAR MENÚS ===========
         
@@ -237,9 +272,7 @@
                 });
             
             // ================= FIN DEL NUEVO CÓDIGO =================
-
-        });
-    </script>
+ </script>
 
 </body>
 </html>
