@@ -223,7 +223,54 @@
         </div>
     </section>
 
-    <footer class="bg-brand-gray-dark">
+    <div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 bg-brand-gray-dark text-white p-4 shadow-lg z-50">
+        <div class="max-w-7xl mx-auto sm:flex sm:items-center sm:justify-between">
+            <p class="text-sm text-gray-300">
+                Este sitio web utiliza cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestro uso de cookies.
+            </p>
+            <button id="accept-cookie" class="mt-3 sm:mt-0 sm:ml-4 flex-shrink-0 w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium bg-brand-white text-brand-gray-dark hover:bg-brand-gray-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-white">
+                ACEPTAR
+            </button>
+        </div>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        // --- Lógica del Menú Móvil (Corregida) ---
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const icons = menuToggle.querySelectorAll('svg');
+
+        // Esta es la lógica correcta (la de tus otros archivos)
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            icons[0].classList.toggle('hidden'); // Icono Hamburguesa
+            icons[1].classList.toggle('hidden'); // Icono X
+        });
+    
+        // --- Lógica del Banner de Cookies (Movida aquí dentro) ---
+        const cookieBanner = document.getElementById('cookie-banner');
+        const acceptCookieBtn = document.getElementById('accept-cookie');
+
+        if (localStorage.getItem('cookie_accepted') !== 'true') {
+            cookieBanner.classList.remove('hidden');
+        }
+
+        acceptCookieBtn.addEventListener('click', () => {
+            cookieBanner.style.display = 'none';
+            localStorage.setItem('cookie_accepted', 'true');
+        });
+
+        // --- Lógica de la invitación (Movida aquí dentro) ---
+        if (window.location.hash.includes("invite_token")) {
+            netlifyIdentity.open('signup');
+        }
+
+    });
+</script>
+
+</body>
+  <footer class="bg-brand-gray-dark">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
              <span class="font-display text-2xl font-bold tracking-wider text-white">LA BROQUETA D'OR</span>
              <p class="text-sm text-gray-400 mt-4">
@@ -237,51 +284,4 @@
             </p>
         </div>
     </footer>
-
-
-    <div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 bg-brand-gray-dark text-white p-4 shadow-lg z-50">
-        <div class="max-w-7xl mx-auto sm:flex sm:items-center sm:justify-between">
-            <p class="text-sm text-gray-300">
-                Este sitio web utiliza cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestro uso de cookies.
-            </p>
-            <button id="accept-cookie" class="mt-3 sm:mt-0 sm:ml-4 flex-shrink-0 w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium bg-brand-white text-brand-gray-dark hover:bg-brand-gray-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-white">
-                ACEPTAR
-            </button>
-        </div>
-    </div>
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            
-            // --- Lógica del Menú Móvil ---
-            const menuToggle = document.getElementById('menu-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const icons = menuToggle.querySelectorAll('svg');
-
-            menuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                icons[0].classList.toggle('hidden'); 
-                icons[0].classList.toggle('block');
-                icons[1].classList.toggle('hidden'); 
-                icons[1].classList.toggle('block');
-            });
-
-            // --- Lógica del Banner de Cookies ---
-            const cookieBanner = document.getElementById('cookie-banner');
-            const acceptCookieBtn = document.getElementById('accept-cookie');
-
-            if (localStorage.getItem('cookie_accepted') !== 'true') {
-                cookieBanner.classList.remove('hidden');
-            }
-
-            acceptCookieBtn.addEventListener('click', () => {
-                cookieBanner.style.display = 'none';
-                localStorage.setItem('cookie_accepted', 'true');
-                
-            });
-        });
-    </script>
-
-</body>
 </html>
