@@ -29,9 +29,7 @@
     }
  }
  </script>
-
  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    </script>
 </head>
 <body class="bg-brand-gray-light font-sans text-brand-gray-dark">
     <header class="bg-brand-white shadow-md sticky top-0 z-50">
@@ -189,7 +187,7 @@
             </button>
         </div>
     </div>
-     <script>
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
             
             // --- Lógica del Menú Móvil ---
@@ -215,14 +213,13 @@
                 cookieBanner.style.display = 'none';
                 localStorage.setItem('cookie_accepted', 'true');
             });
-        });
 
-            // =========== NUEVO CÓDIGO PARA CARGAR MENÚS ===========
+            // --- CÓDIGO DE CARGAR MENÚS (MOVIDO AQUÍ DENTRO) ---
         
             // Función para rellenar las listas <ul>
             function rellenarLista(ulElement, items) {
-                if (!ulElement) return; // Seguridad por si el ID no existe
-                ulElement.innerHTML = ''; // Limpiar lista
+                if (!ulElement) return; 
+                ulElement.innerHTML = ''; 
                 items.forEach(itemText => {
                     const li = document.createElement('li');
                     li.textContent = itemText;
@@ -239,7 +236,6 @@
             }
 
             // Cargar los datos desde el JSON
-            // Asume que el archivo está en /_data/menus.json
             fetch('/_data/menus.json')
                 .then(response => {
                     if (!response.ok) {
@@ -268,14 +264,13 @@
                 })
                 .catch(error => {
                     console.error("Error al cargar los menús:", error);
-                    // Opcional: Mostrar un error al usuario
                     rellenarTexto('diario-titulo', 'Error al cargar menú');
                     rellenarTexto('finde-titulo', 'Error al cargar menú');
                     rellenarTexto('grupos-titulo', 'Error al cargar menú');
                 });
             
-            // ================= FIN DEL NUEVO CÓDIGO =================
- </script>
+        });
+    </script>
 
 </body>
 </html>

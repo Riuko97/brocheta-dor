@@ -28,6 +28,8 @@
     }
  }
  </script>
+ <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
 </head>
 <body class="bg-brand-gray-light font-sans text-brand-gray-dark">
 
@@ -276,6 +278,7 @@
             acceptCookieBtn.addEventListener('click', () => {
                 cookieBanner.style.display = 'none';
                 localStorage.setItem('cookie_accepted', 'true');
+                
             });
         });
     </script>
